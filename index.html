@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Please fill out this form as your feedback is valuable to us</p>
+    <form method="post" id="survey-form">
+
+      <fieldset>
+        <label for="name" id="name-label">Enter Your Name: 
+          <input id="name" name="name" type="text" placeholder="Enter your name" required />
+        </label>
+        <label for="email" id="email-label">Enter Your Email: 
+          <input id="email" name="email" type="email" placeholder="Enter your email" required />
+        </label>
+        <label for="age" id="number-label">Input your age (Optional): 
+          <input id="age" type="number" name="age" min="13" max="120" placeholder="Enter your age" />
+        </label>
+        <label for="number" id="number-label">Input your number (Optional):
+          <input id="number" type="number" name="number" min="1" max="100" placeholder="Enter a number" />
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>How likely are you to recommend us?</legend>
+        <label for="most-likely"><input id="most-likely" type="radio" name="recommend" value="most-likely" class="inline" checked />  Most Likely</label>
+        <label for="least-likely"><input id="least-likely" type="radio" name="recommend" value="least-likely" class="inline" /> Least Likely</label>
+        <label for="not-sure"><input id="not-sure" type="radio" name="recommend" value="not-sure" class="inline" /> Not Sure</label>
+      </fieldset>
+
+      <fieldset>
+        <label for="referrer">What role describes you the best?
+          <select id="dropdown" name="referrer">
+            <option value="">(select one)</option>
+            <option value="1">Student</option>
+            <option value="2">Full time Job</option>
+            <option value="3">Business person</option>
+            <option value="4">Other</option>
+          </select>
+        </label>
+        
+        <label for="bio">Please Enter Your Feedback:
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I would like some changes in something...."></textarea>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Which of the following apply to you?</legend>
+        <label><input type="checkbox" name="check1" value="Option 1" /> Option 1</label>
+        <label><input type="checkbox" name="check2" value="Option 2" /> Option 2</label>
+      </fieldset>
+
+      <input type="submit" id="submit" value="Submit" />
+    </form>
+  </body>
+</html>
